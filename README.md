@@ -18,41 +18,77 @@ Swagger Documentation: API documentation for all microservices.
 
 
 Project Structure:
-project-root/
+
+Assigment2/
+
 ├── shared/
+
 │   ├── middleware/
+
 │   │   ├── auth-jwt.js
+
 │   ├── utils/
+
 │   │   ├── tokenHelper.js
+
 │   ├── package.json
+
 ├── auth-microservice/
+
 │   ├── routes/
+
 │   │   ├── auth-routes-authMicroservice.js
+
 │   ├── controllers/
+
 │   │   ├── authController.js
+
 │   ├── server.js
+
 │   ├── Dockerfile
+
 │   ├── package.json
+
 │   ├── .env
+
 ├── bookings-microservice/
+
 │   ├── routes/
+
 │   │   ├── bookingRoutes.js
+
 │   ├── controllers/
+
 │   │   ├── bookingController.js
+
 │   ├── server.js
+
 │   ├── Dockerfile
+
 │   ├── package.json
+
 │   ├── .env
+
 ├── listings-microservice/
+
 │   ├── routes/
+
 │   │   ├── listingRoutes.js
+
 │   ├── controllers/
+
 │   │   ├── listingController.js
+
 │   ├── server.js
+
 │   ├── Dockerfile
+
 │   ├── package.json
+
 │   ├── .env
+
 └── docker-compose.yml
+
 
 
 Technologies Used
