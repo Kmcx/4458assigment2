@@ -81,11 +81,6 @@ MongoDB (if running locally)
 
 Installation
 
-Clone the repository:
-
-git clone https://github.com/your-repo.git
-cd project-root
-
 Install dependencies for all microservices:
 
 cd auth-microservice && npm install
