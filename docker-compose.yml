@@ -1,0 +1,55 @@
+version: '3.9'
+
+services:
+  auth-microservice:
+    build:
+      context: ./auth-microservice
+    container_name: auth_service
+    ports:
+      - "5001:5001"
+    volumes:
+      - ../shared:/usr/src/app/shared
+    environment:
+      - MONGO_URI=mongodb+srv://kmc:cmr.2017@se4458.ix5di.mongodb.net/?retryWrites=true&w=majority&appName=SE4458
+      - JWT_SECRET=kmc_jwt
+    depends_on:
+      - mongo
+
+  bookings-microservice:
+    build:
+      context: ./bookings-microservice
+    container_name: bookings_service
+    ports:
+      - "5002:5002"
+    volumes:
+      - ../shared:/usr/src/app/shared
+    environment:
+      - MONGO_URI=mongodb+srv://kmc:cmr.2017@se4458.ix5di.mongodb.net/?retryWrites=true&w=majority&appName=SE4458
+      - JWT_SECRET=kmc_jwt
+    depends_on:
+      - mongo
+
+  listings-microservice:
+    build:
+      context: ./listings-microservice
+    container_name: listings_service
+    ports:
+      - "5003:5003"
+    volumes:
+      - ../shared:/usr/src/app/shared
+    environment:
+      - MONGO_URI=mongodb+srv://kmc:cmr.2017@se4458.ix5di.mongodb.net/?retryWrites=true&w=majority&appName=SE4458
+      - JWT_SECRET=kmc_jwt
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:6.0
+    container_name: mongo_db
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:
