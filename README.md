@@ -1,5 +1,8 @@
 Microservices-Based Application
 
+Presentation: https://youtu.be/3WPGKcWcC6I
+
+
 Overview
 
 This repository contains a microservices-based application that provides functionality for authentication, bookings, and listings. Each microservice operates independently and communicates via REST APIs. The project is containerized using Docker and supports easy scaling and deployment.
@@ -93,27 +96,28 @@ Assigment2/
 
 Technologies Used
 
-Node.js: Server-side runtime.
+Node.js
 
-Express.js: Web framework.
+Express.js
 
-MongoDB: Database for data storage.
+MongoDB
 
-JWT (jsonwebtoken): For authentication and secure data exchange.
+JWT
 
-Swagger: API documentation.
+Swagger 
 
-Docker: Containerization.
+Docker
+
 
 
 
 Prerequisites
 
-Node.js (v20.x recommended)
+Node.js 
 
 Docker
 
-MongoDB (if running locally)
+MongoDB 
 
 Installation
 
@@ -123,12 +127,13 @@ cd auth-microservice && npm install
 cd ../bookings-microservice && npm install
 cd ../listings-microservice && npm install
 
+
 Set up environment variables:
 Create a .env file in each microservice folder with the following content:
 
 PORT=5001  # For auth-microservice (increment for others)
-MONGO_URI=mongodb://localhost:27017/<db_name>
-JWT_SECRET=your_jwt_secret
+MONGO_URI=mongodb+srv://kmc:cmr.2017@se4458.ix5di.mongodb.net/?retryWrites=true&w=majority&appName=SE4458
+JWT_SECRET=kmc_jwt
 
 Start each microservice:
 
