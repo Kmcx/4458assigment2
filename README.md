@@ -1,4 +1,4 @@
-Microservices-Based Application
+Microservices-Based  API Gateway Application
 
 Presentation: https://youtu.be/3WPGKcWcC6I
 
@@ -94,7 +94,7 @@ Assigment2/
 
 
 
-Technologies Used
+Technologies Used:
 
 Node.js
 
@@ -111,7 +111,7 @@ Docker
 
 
 
-Prerequisites
+Prerequisites:
 
 Node.js 
 
@@ -131,8 +131,10 @@ cd ../listings-microservice && npm install
 Set up environment variables:
 Create a .env file in each microservice folder with the following content:
 
-PORT=5001  # For auth-microservice (increment for others)
+PORT=5001  # For auth-microservice 
+
 MONGO_URI=mongodb+srv://kmc:cmr.2017@se4458.ix5di.mongodb.net/?retryWrites=true&w=majority&appName=SE4458
+
 JWT_SECRET=kmc_jwt
 
 Start each microservice:
