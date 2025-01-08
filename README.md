@@ -133,8 +133,6 @@ Create a .env file in each microservice folder with the following content:
 
 PORT=5001  # For auth-microservice 
 
-MONGO_URI=mongodb+srv://kmc:cmr.2017@se4458.ix5di.mongodb.net/?retryWrites=true&w=majority&appName=SE4458
-
 JWT_SECRET=kmc_jwt
 
 Start each microservice:
